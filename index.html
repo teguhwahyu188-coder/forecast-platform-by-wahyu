@@ -35,21 +35,21 @@
             transform: translateY(-3px);
         }
 
-        /* FIX: Menggunakan Aspek Rasio Gambar Gedung Asli agar Tidak Terpotong di GitHub */
+        /* PERUBAHAN UTAMA: Header diubah menjadi flex-center agar teks otomatis di tengah */
         .header {
             position: relative;
-            /* Menggunakan gambar lokal yang satu folder di GitHub. Pastikan nama file di repo sama persis huruf besar/kecilnya */
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url('Building Office SPF.jpg');
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.65) 100%), url('Building Office SPF.jpg');
             background-size: cover;
-            background-position: center 30%; /* Fokus digeser ke area gedung agar tidak terpotong langit terlalu banyak */
+            background-position: center 45%; /* Fokus gambar pas di area gedung */
             background-repeat: no-repeat;
             color: white;
-            padding: 80px 24px 25px 24px; /* Padding atas ditambah supaya teks turun ke bawah gambar gedung */
+            padding: 24px; 
             text-align: center;
-            min-height: 230px; /* Tinggi ideal agar gedung terlihat proporsional */
+            min-height: 180px; /* Tinggi dikecilkan agar lebih proporsional dan ringkas */
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: center; /* Membuat teks berada tepat di tengah secara vertikal */
+            align-items: center;    /* Membuat teks berada tepat di tengah secara horizontal */
         }
 
         .header::after {
@@ -74,18 +74,18 @@
             text-transform: uppercase;
             letter-spacing: -0.3px;
             color: #FFFFFF;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8); /* Dipertebal agar teks kontras dengan background gedung */
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.8); /* Shadow diperkuat agar teks sangat jelas */
         }
 
         .header h1 span {
             display: block;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 400;
             letter-spacing: 2px;
-            margin-top: 8px;
+            margin-top: 6px;
             color: #F8FAFC;
             opacity: 0.95;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
         }
 
         .menu-section {
@@ -251,9 +251,9 @@
 
         @media (max-width: 480px) {
             body { padding: 16px; }
-            .header { min-height: 180px; padding: 50px 16px 15px 16px; }
+            .header { min-height: 150px; padding: 16px; background-position: center 45%; }
             .header h1 { font-size: 1.25rem; }
-            .header h1 span { font-size: 0.95rem; margin-top: 6px; }
+            .header h1 span { font-size: 0.95rem; margin-top: 4px; }
             .menu-section { padding: 20px 18px; }
             .menu-header { padding: 12px 16px; }
             .brand-logo-container { width: 45px; height: 30px; }
